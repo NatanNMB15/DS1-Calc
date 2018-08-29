@@ -12,7 +12,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.SwingConstants;
 
-public class MainWindow extends JFrame
+public class MainWindow extends JFrame implements IMainWindow
 {
     private static MainWindow window;
     private JPanel pnlResultado = new JPanel();
@@ -44,16 +44,6 @@ public class MainWindow extends JFrame
     private final JLabel lblEquacao = new JLabel("");
     private final JLabel lblResultado = new JLabel("");
     
-    
-    public static MainWindow getInstance()
-    {
-        if(window == null)
-        {
-            window = new MainWindow();
-        }
-        
-        return window;
-    }
     
     public MainWindow() 
     {
@@ -142,28 +132,28 @@ public class MainWindow extends JFrame
             
             if(lblEquacao.getText().endsWith("X"))
             {
-                resultado = MainControl.getInstance().multiplicacao(num1, num2);
+                resultado = multiplicacao(num1, num2);
                 lblEquacao.setText(" ");
                 lblResultado.setText(String.valueOf(resultado));
             }
             
             else if(lblEquacao.getText().endsWith("/"))
             {
-                resultado = MainControl.getInstance().divisao(num1, num2);
+                resultado = divisao(num1, num2);
                 lblEquacao.setText(" ");
                 lblResultado.setText(String.valueOf(resultado));
             }
             
             else if(lblEquacao.getText().endsWith("+"))
             {
-                resultado = MainControl.getInstance().soma(num1, num2);
+                resultado = soma(num1, num2);
                 lblEquacao.setText(" ");
                 lblResultado.setText(String.valueOf(resultado));
             }
             
             else if(lblEquacao.getText().endsWith("-"))
             {
-                resultado = MainControl.getInstance().subtracao(num1, num2);
+                resultado = subtracao(num1, num2);
                 lblEquacao.setText(" ");
                 lblResultado.setText(String.valueOf(resultado));
             }
@@ -173,5 +163,29 @@ public class MainWindow extends JFrame
         }
         window.doLayout();
         window.repaint();
+    }
+    
+    @Override
+    private double multiplicacao(double num1, double num2)
+    {
+        return 
+    }
+    
+    @Override
+    private double divisao(double num1, double num2)
+    {
+        return 
+    }
+    
+    @Override
+    private double soma(double num1, double num2)
+    {
+        return 
+    }
+    
+    @Override
+    private double subtracao(double num1, double num2)
+    {
+        return 
     }
 }
