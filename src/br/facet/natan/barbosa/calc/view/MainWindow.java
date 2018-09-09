@@ -91,6 +91,7 @@ public class MainWindow extends JFrame implements IMainWindow
         
     }
     
+    @Override
     public void atualizarResultado(String s)
     {
         if(!s.equals("CE") && !s.equals("C") && !s.equals("<") && !s.equals("/") && !s.equals("X") && !s.equals("-") && !s.equals("+") && !s.equals("=") && !s.equals(" "))
@@ -166,26 +167,36 @@ public class MainWindow extends JFrame implements IMainWindow
     }
     
     @Override
-    private double multiplicacao(double num1, double num2)
+    public double multiplicacao(double num1, double num2)
     {
-        return 
+        return 0;
     }
     
     @Override
-    private double divisao(double num1, double num2)
+    public double divisao(double num1, double num2)
     {
-        return 
+        return 0;
     }
     
     @Override
-    private double soma(double num1, double num2)
+    public double soma(double num1, double num2)
     {
-        return 
+        return 0;
     }
     
     @Override
-    private double subtracao(double num1, double num2)
+    public double subtracao(double num1, double num2)
     {
-        return 
+        return 0;
+    }
+    
+    @Override
+    public void carregarJanela()
+    {
+        if(window == null)
+        {
+            window = new MainWindow();
+        }
+        this.setVisible(true);
     }
 }

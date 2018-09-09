@@ -9,4 +9,8 @@ public interface IMainWindow
     double soma(double num1, double num2);
     
     double subtracao(double num1, double num2);
+    
+    void carregarJanela();
+    
+    void atualizarResultado(String s);
 }

@@ -5,9 +5,13 @@ import java.awt.Insets;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
+import br.facet.natan.barbosa.calc.control.IMainControl;
+import br.facet.natan.barbosa.calc.control.MainControl;
 
 public class Botao extends JButton
-{
+{   
+    IMainControl control = new MainControl();
+    
     public Botao(String s)
     {
         setBorder(null);
@@ -20,7 +24,7 @@ public class Botao extends JButton
             @Override
             public void mousePressed(MouseEvent e) 
             {
-                MainWindow.getInstance().atualizarResultado(s);
+                control.atualizarResultado(s);
             }
         });
     }
