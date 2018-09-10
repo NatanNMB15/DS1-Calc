@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import br.facet.natan.barbosa.calc.control.IMainControl;
 import br.facet.natan.barbosa.calc.control.MainControl;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
@@ -15,6 +16,7 @@ import javax.swing.SwingConstants;
 public class MainWindow extends JFrame implements IMainWindow
 {
     private static MainWindow window;
+    private static IMainControl control;
     private JPanel pnlResultado = new JPanel();
     private JPanel pnlOperadores = new JPanel();
     private boolean operacao = false;
@@ -94,6 +96,11 @@ public class MainWindow extends JFrame implements IMainWindow
     @Override
     public void atualizarResultado(String s)
     {
+        if(control == null)
+        {
+            control = new MainControl();
+        }
+        
         if(!s.equals("CE") && !s.equals("C") && !s.equals("<") && !s.equals("/") && !s.equals("X") && !s.equals("-") && !s.equals("+") && !s.equals("=") && !s.equals(" "))
         {
             lblResultado.setText(lblResultado.getText() + s);
@@ -169,25 +176,25 @@ public class MainWindow extends JFrame implements IMainWindow
     @Override
     public double multiplicacao(double num1, double num2)
     {
-        return 0;
+        return control.multiplicacao(num1, num2);
     }
     
     @Override
     public double divisao(double num1, double num2)
     {
-        return 0;
+        return control.divisao(num1, num2);
     }
     
     @Override
     public double soma(double num1, double num2)
     {
-        return 0;
+        return control.soma(num1, num2);
     }
     
     @Override
     public double subtracao(double num1, double num2)
     {
-        return 0;
+        return control.subtracao(num1, num2);
     }
     
     @Override

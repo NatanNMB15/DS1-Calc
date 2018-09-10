@@ -10,7 +10,7 @@ import br.facet.natan.barbosa.calc.control.MainControl;
 
 public class Botao extends JButton
 {   
-    IMainControl control = new MainControl();
+    IMainControl control;
     
     public Botao(String s)
     {
@@ -24,8 +24,18 @@ public class Botao extends JButton
             @Override
             public void mousePressed(MouseEvent e) 
             {
-                control.atualizarResultado(s);
+                atualizarResultado(s);
             }
         });
+    }
+    
+    private void atualizarResultado(String s)
+    {
+        if(control == null)
+        {
+            control = new MainControl();
+        }
+        
+        control.atualizarResultado(s);
     }
 }
