@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_5mBFMMELEeib37i1UJ2W6Q" name="DS1Calculadora">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_59BP8MELEeib37i1UJ2W6Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_a_yQ0MENEeib37i1UJ2W6Q" name="DS1Calculadora">
+      <packagedElement xmi:type="uml:Package" xmi:id="_bALSYMENEeib37i1UJ2W6Q" name="br">
+        <packagedElement xmi:type="uml:Package" xmi:id="_bAMggMENEeib37i1UJ2W6Q" name="facet">
+          <packagedElement xmi:type="uml:Package" xmi:id="_bAMggcENEeib37i1UJ2W6Q" name="natan">
+            <packagedElement xmi:type="uml:Package" xmi:id="_bAMggsENEeib37i1UJ2W6Q" name="barbosa">
+              <packagedElement xmi:type="uml:Package" xmi:id="_bAMgg8ENEeib37i1UJ2W6Q" name="calc">
+                <packagedElement xmi:type="uml:Package" xmi:id="_bANHkMENEeib37i1UJ2W6Q" name="control">
+                  <packagedElement xmi:type="uml:Class" xmi:id="_KQ_acMEcEeiuGJdTYPEkJg" name="MainControl" visibility="public">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_KRZDEMEcEeiuGJdTYPEkJg" name="control" visibility="private" isStatic="true" type="_KRDE0MEcEeiuGJdTYPEkJg" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_KRg-4MEcEeiuGJdTYPEkJg" name="window" visibility="private" isStatic="true" type="_lhk0kMENEeib37i1UJ2W6Q" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_KRqv4MEcEeiuGJdTYPEkJg" name="calculadora" visibility="private" isStatic="true" type="_gCU9oMENEeib37i1UJ2W6Q" isUnique="false"/>
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_KRRHQMEcEeiuGJdTYPEkJg" name="MainControl implements IMainControl" client="_KQ_acMEcEeiuGJdTYPEkJg" supplier="_KRDE0MEcEeiuGJdTYPEkJg" contract="_KRDE0MEcEeiuGJdTYPEkJg"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KSEYgMEcEeiuGJdTYPEkJg" name="enviarOperacao" specification="_KRxdkMEcEeiuGJdTYPEkJg">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQXwQMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQYXUMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQYXUcEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQY-YMEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQY-YcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQY-YsEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <language>JAVA</language>
+                      <body>&#xD;
+    String resultado = calculadora.realizarOperacao(equacao, numeros);&#xD;
+    control.resultadoFinal(resultado);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KSP-sMEcEeiuGJdTYPEkJg" name="resultadoFinal" specification="_KSIp8MEcEeiuGJdTYPEkJg">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQZlcMEcEeiuGJdTYPEkJg" name="s" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQZlccEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQZlcsEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <language>JAVA</language>
+                      <body>&#xD;
+    window.resultadoFinal(s);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KSWsYcEcEeiuGJdTYPEkJg" name="atualizarResultado" specification="_KSUQIMEcEeiuGJdTYPEkJg">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQZlc8EcEeiuGJdTYPEkJg" name="s" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQaMgMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQaMgcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <language>JAVA</language>
+                      <body>&#xD;
+    window.atualizarResultado(s);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KSczAMEcEeiuGJdTYPEkJg" name="carregarConfig" specification="_KSaWwMEcEeiuGJdTYPEkJg">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    try {&#xD;
+        File file = new File(&quot;DS1Calculadora-results.xml&quot;);&#xD;
+        //&#xD;
+        if (file.exists()) {&#xD;
+            Configurations configs = new Configurations();&#xD;
+            XMLConfiguration config = configs.xml(file);&#xD;
+            //&#xD;
+            //&#xD;
+            ArrayList&lt;String> equacao = (ArrayList&lt;String>) config.getList(String.class, &quot;calculadora.Equacao.operador&quot;, null);&#xD;
+            ArrayList&lt;String> numeros = (ArrayList&lt;String>) config.getList(String.class, &quot;calculadora.Numeros.num&quot;, null);&#xD;
+            String strEquacao = config.getString(&quot;calculadora.lblEquacao&quot;);&#xD;
+            String strResultado = config.getString(&quot;calculadora.lblResultado&quot;);&#xD;
+            int indexNumeros = config.getInt(&quot;calculadora.indexNumeros&quot;);&#xD;
+            boolean operacao = config.getBoolean(&quot;calculadora.operacao&quot;);&#xD;
+            window.carregarConfig(equacao, numeros, strEquacao, strResultado, indexNumeros, operacao);&#xD;
+        }&#xD;
+    } catch (Exception e) {&#xD;
+        e.printStackTrace();&#xD;
+    }&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KS6GAMEcEeiuGJdTYPEkJg" name="salvarConfig" specification="_KSjgsMEcEeiuGJdTYPEkJg">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQaMgsEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQazkMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQazkcEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQazksEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQazk8EcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQbaoMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQbaocEcEeiuGJdTYPEkJg" name="lblEquacao" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQbaosEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQbao8EcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQcBsMEcEeiuGJdTYPEkJg" name="lblResultado" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQcBscEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQcBssEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQcBs8EcEeiuGJdTYPEkJg" name="indexNumeros">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQcowMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQcowcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQcowsEcEeiuGJdTYPEkJg" name="operacao">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQcow8EcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQdP0MEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <language>JAVA</language>
+                      <body>&#xD;
+    try {&#xD;
+        File file = new File(&quot;DS1Calculadora-results.xml&quot;);&#xD;
+        file.createNewFile();&#xD;
+        //&#xD;
+        //&#xD;
+        XMLConfiguration config = new XMLConfiguration();&#xD;
+        ////// Config Fibonacci&#xD;
+        if (equacao != null) {&#xD;
+            // Salva o ArrayList equacao&#xD;
+            config.addProperty(&quot;calculadora.Equacao.operador&quot;, equacao);&#xD;
+        }&#xD;
+        if (numeros != null) {&#xD;
+            // Salva o ArrayList numeros&#xD;
+            config.addProperty(&quot;calculadora.Numeros.num&quot;, numeros);&#xD;
+        }&#xD;
+        // Salva o ArrayList equacao&#xD;
+        config.addProperty(&quot;calculadora.lblEquacao&quot;, lblEquacao.getText());&#xD;
+        // Salva o ArrayList numeros&#xD;
+        config.addProperty(&quot;calculadora.lblResultado&quot;, lblResultado.getText());&#xD;
+        // Salva o índice de números do ArrayList numeros&#xD;
+        config.addProperty(&quot;calculadora.indexNumeros&quot;, indexNumeros);&#xD;
+        // Salva o estado da variável operacao&#xD;
+        config.addProperty(&quot;calculadora.operacao&quot;, operacao);&#xD;
+        //&#xD;
+        //&#xD;
+        FileHandler handler = new FileHandler(config);&#xD;
+        handler.save(file);&#xD;
+    } catch (Exception e) {&#xD;
+        e.printStackTrace();&#xD;
+    }&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KS-XcMEcEeiuGJdTYPEkJg" name="carregarJanela" specification="_KS9JUMEcEeiuGJdTYPEkJg">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    window.carregarJanela();&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KTLy0MEcEeiuGJdTYPEkJg" name="main" specification="_KTCo4MEcEeiuGJdTYPEkJg">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQdP0cEcEeiuGJdTYPEkJg" name="args" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQdP0sEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQdP08EcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <language>JAVA</language>
+                      <body>&#xD;
+    control = new MainControl();&#xD;
+    calculadora = new Calculadora();&#xD;
+    window = new MainWindow();&#xD;
+    control.carregarJanela();&#xD;
+    control.carregarConfig();&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_KRxdkMEcEeiuGJdTYPEkJg" name="enviarOperacao" visibility="public" method="_KSEYgMEcEeiuGJdTYPEkJg">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KR5ZYMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KR6AcMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KR6ngMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KSAHEMEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KSB8QMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KSDKYMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_KSIp8MEcEeiuGJdTYPEkJg" name="resultadoFinal" visibility="public" method="_KSP-sMEcEeiuGJdTYPEkJg">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KSM7YMEcEeiuGJdTYPEkJg" name="s" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_KSUQIMEcEeiuGJdTYPEkJg" name="atualizarResultado" visibility="public" method="_KSWsYcEcEeiuGJdTYPEkJg">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KSWsYMEcEeiuGJdTYPEkJg" name="s" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_KSaWwMEcEeiuGJdTYPEkJg" name="carregarConfig" visibility="public" method="_KSczAMEcEeiuGJdTYPEkJg"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_KSjgsMEcEeiuGJdTYPEkJg" name="salvarConfig" visibility="public" method="_KS6GAMEcEeiuGJdTYPEkJg">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KSnyIMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KSqOYMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KSrcgMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KStRsMEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KSuf0MEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KSvt8MEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KSxjIMEcEeiuGJdTYPEkJg" name="lblEquacao" type="_bBVI8MENEeib37i1UJ2W6Q"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KSz_YMEcEeiuGJdTYPEkJg" name="lblResultado" type="_bBVI8MENEeib37i1UJ2W6Q"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KS10kMEcEeiuGJdTYPEkJg" name="indexNumeros">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KS4Q0MEcEeiuGJdTYPEkJg" name="operacao">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_KS9JUMEcEeiuGJdTYPEkJg" name="carregarJanela" visibility="public" method="_KS-XcMEcEeiuGJdTYPEkJg"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_KTCo4MEcEeiuGJdTYPEkJg" name="main" visibility="public" isStatic="true" method="_KTLy0MEcEeiuGJdTYPEkJg">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KTFsMMEcEeiuGJdTYPEkJg" name="args" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KTJWkMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KTKksMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_THKJ4MEcEeiuGJdTYPEkJg" name="enviarOperacao"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_THT64MEcEeiuGJdTYPEkJg" name="enviarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_THfhEMEcEeiuGJdTYPEkJg">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_THgIIMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_THgIIcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_THruUMEcEeiuGJdTYPEkJg" name="enviarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_THsVYMEcEeiuGJdTYPEkJg" name="equacao">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_THs8cMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_THs8ccEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TH3UgMEcEeiuGJdTYPEkJg" name="enviarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TH37kMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TH4ioMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TH4iocEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TIJoYMEcEeiuGJdTYPEkJg" name="enviarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TIKPcMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TIKPccEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TIK2gMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TIUAcMEcEeiuGJdTYPEkJg" name="enviarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TIUngMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TIUngcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TIUngsEcEeiuGJdTYPEkJg"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TIfmoMEcEeiuGJdTYPEkJg" name="enviarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TIgNsMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TIgNscEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TIg0wMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TIg0wcEcEeiuGJdTYPEkJg">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TIg0wsEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TIg0w8EcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TIrM0MEcEeiuGJdTYPEkJg" name="enviarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TIsa8MEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TIsa8cEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TItCAMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TItCAcEcEeiuGJdTYPEkJg" name="numeros">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TItCAsEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TItpEMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TI090MEcEeiuGJdTYPEkJg" name="enviarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TI1k4MEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TI2L8MEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TI2L8cEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TI2L8sEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TI2zAMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TI2zAcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TI-u0MEcEeiuGJdTYPEkJg" name="enviarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TI_V4MEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TI_V4cEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TI_88MEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TI_88cEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TI_88sEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TI_888EcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TJIf0MEcEeiuGJdTYPEkJg" name="enviarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TJJG4MEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TJJG4cEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TJJG4sEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TJJt8MEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TJJt8cEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TJJt8sEcEeiuGJdTYPEkJg"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TJUGAMEcEeiuGJdTYPEkJg" name="resultadoFinal"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TJfsMMEcEeiuGJdTYPEkJg" name="resultadoFinal">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TJgTQMEcEeiuGJdTYPEkJg">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TJgTQcEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TJg6UMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TJpdMMEcEeiuGJdTYPEkJg" name="resultadoFinal">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TJqEQMEcEeiuGJdTYPEkJg" name="s">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TJqEQcEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TJqrUMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TJ_bcMEcEeiuGJdTYPEkJg" name="atualizarResultado"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TKLBoMEcEeiuGJdTYPEkJg" name="atualizarResultado">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TKLBocEcEeiuGJdTYPEkJg">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TKLosMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TKLoscEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TKWn0MEcEeiuGJdTYPEkJg" name="atualizarResultado">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TKXO4MEcEeiuGJdTYPEkJg" name="s">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TKXO4cEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TKX18MEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TK8dsMEcEeiuGJdTYPEkJg" name="salvarConfig"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TLLHMMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TLLHMcEcEeiuGJdTYPEkJg">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TLLuQMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TLMVUMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TLZJoMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TLZwsMEcEeiuGJdTYPEkJg" name="equacao">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TLaXwMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TLaXwcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TLoaMMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TLpBQMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TLpoUMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TLpoUcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TL7VIMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TL7VIcEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TL78MMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TL78McEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TMJXkMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TMJ-oMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TMKlsMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TMKlscEcEeiuGJdTYPEkJg"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TMXaAMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TMYBEMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TMYBEcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TMYBEsEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TMYoIMEcEeiuGJdTYPEkJg">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TMYoIcEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TMYoIsEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TMk1YMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TMlccMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TMlcccEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TMmDgMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TMmDgcEcEeiuGJdTYPEkJg" name="numeros">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TMmqkMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TMmqkcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TM_sIMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TNATMMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TNATMcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TNA6QMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TNA6QcEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TNA6QsEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TNA6Q8EcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TNNHgMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TNNHgcEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TNNukMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TNNukcEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TNNuksEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TNOVoMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TNOVocEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TNbxAMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TNcYEMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TNcYEcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TNcYEsEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TNc_IMEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TNc_IcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TNc_IsEcEeiuGJdTYPEkJg"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TNpMYMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TNpzcMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TNqagMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TNqagcEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TNqagsEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TNrBkMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TNrBkcEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TNrBksEcEeiuGJdTYPEkJg">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TNrBk8EcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TNrooMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TN3O0MEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TN314MEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TN4c8MEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TN4c8cEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TN4c8sEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TN5EAMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TN5EAcEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TN5EAsEcEeiuGJdTYPEkJg" name="lblEquacao">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TN5rEMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TN5rEcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TOF4UMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOF4UcEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TOGfYMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TOGfYcEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOHGcMEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TOHGccEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TOHGcsEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOHGc8EcEeiuGJdTYPEkJg" name="lblEquacao" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TOHtgMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TOHtgcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TOVI4MEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOVI4cEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TOVv8MEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TOVv8cEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOWXAMEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TOWXAcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TOWXAsEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOWXA8EcEeiuGJdTYPEkJg" name="lblEquacao" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TOW-EMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TOW-EcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOW-EsEcEeiuGJdTYPEkJg">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TOW-E8EcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TOXlIMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TOkZcMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOlAgMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TOlnkMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TOlnkcEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOlnksEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TOmOoMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TOmOocEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOm1sMEcEeiuGJdTYPEkJg" name="lblEquacao" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TOm1scEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TOm1ssEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOncwMEcEeiuGJdTYPEkJg" name="lblResultado">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TOncwcEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TOncwsEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TOzC8MEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOzqAMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TOzqAcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TOzqAsEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TO0REMEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TO0REcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TO0REsEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TO04IMEcEeiuGJdTYPEkJg" name="lblEquacao" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TO04IcEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TO04IsEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TO1fMMEcEeiuGJdTYPEkJg" name="lblResultado" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TO2GQMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TO2GQcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TPCTgMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPCTgcEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPCTgsEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPC6kMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPC6kcEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPC6ksEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPDhoMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPDhocEcEeiuGJdTYPEkJg" name="lblEquacao" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPDhosEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPEIsMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPEIscEcEeiuGJdTYPEkJg" name="lblResultado" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPEIssEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPEvwMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPEvwcEcEeiuGJdTYPEkJg">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPEvwsEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPEvw8EcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TPQ9AMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPRkEMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPRkEcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPSLIMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPSLIcEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPSLIsEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPSyMMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPSyMcEcEeiuGJdTYPEkJg" name="lblEquacao" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPTZQMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPTZQcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPTZQsEcEeiuGJdTYPEkJg" name="lblResultado" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPUAUMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPUAUcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPUAUsEcEeiuGJdTYPEkJg" name="indexNumeros">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPUnYMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPUnYcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TPip0MEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPjQ4MEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPj38MEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPj38cEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPkfAMEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPkfAcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPkfAsEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPlGEMEcEeiuGJdTYPEkJg" name="lblEquacao" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPlGEcEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPltIMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPltIcEcEeiuGJdTYPEkJg" name="lblResultado" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPltIsEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPmUMMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPmUMcEcEeiuGJdTYPEkJg" name="indexNumeros">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TPmUMsEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TPm7QMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TPzvkMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TP0WoMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TP09sMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TP09scEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TP1kwMEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TP1kwcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TP1kwsEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TP2L0MEcEeiuGJdTYPEkJg" name="lblEquacao" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TP2L0cEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TP2L0sEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TP2y4MEcEeiuGJdTYPEkJg" name="lblResultado" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TP2y4cEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TP2y4sEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TP2y48EcEeiuGJdTYPEkJg" name="indexNumeros">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TP3Z8MEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TP3Z8cEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TP3Z8sEcEeiuGJdTYPEkJg">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TP3Z88EcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TP4BAMEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TQE1UMEcEeiuGJdTYPEkJg" name="salvarConfig">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQFcYMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQFcYcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQGDcMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQGDccEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQGDcsEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQGqgMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQGqgcEcEeiuGJdTYPEkJg" name="lblEquacao" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQHRkMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQHRkcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQHRksEcEeiuGJdTYPEkJg" name="lblResultado" type="_bBVI8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQH4oMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQH4ocEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQH4osEcEeiuGJdTYPEkJg" name="indexNumeros">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQIfsMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQIfscEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TQIfssEcEeiuGJdTYPEkJg" name="operacao">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TQJGwMEcEeiuGJdTYPEkJg" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TQJGwcEcEeiuGJdTYPEkJg" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Interface" xmi:id="_KRDE0MEcEeiuGJdTYPEkJg" name="IMainControl" visibility="public">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_XVr-kMHGEeiwpfr1rwX9Zg" name="imainwindow" type="_lhk0kMENEeib37i1UJ2W6Q" association="_XVULIMHGEeiwpfr1rwX9Zg"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_zBbs4MHGEeiwpfr1rwX9Zg" name="botao" type="_j1SR4MENEeib37i1UJ2W6Q" association="_zBORgMHGEeiwpfr1rwX9Zg">
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7t2qcMHGEeiwpfr1rwX9Zg" value="1"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7t8xEMHGEeiwpfr1rwX9Zg" value="*"/>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="__6VR8MHGEeiwpfr1rwX9Zg" name="icalculadora" type="_gCU9oMENEeib37i1UJ2W6Q" association="__6QZcMHGEeiwpfr1rwX9Zg"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TG65UMEcEeiuGJdTYPEkJg" name="carregarJanela" visibility="private"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_THI7wMEcEeiuGJdTYPEkJg" name="enviarOperacao" visibility="private">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_THSswMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TIHMIMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TITZYMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TIeYgMEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TI9gscEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TJHRssEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TJRpwMEcEeiuGJdTYPEkJg" name="resultadoFinal" visibility="private">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TJdP8MEcEeiuGJdTYPEkJg" name="s" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TJ8_MMEcEeiuGJdTYPEkJg" name="atualizarResultado" visibility="private">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TKIlYMEcEeiuGJdTYPEkJg" name="s" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TKo7scEcEeiuGJdTYPEkJg" name="carregarConfig" visibility="private"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_TK2-IMEcEeiuGJdTYPEkJg" name="salvarConfig" visibility="private">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TLFnoMEcEeiuGJdTYPEkJg" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TL1OgMEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TMFGIMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TMShgMEcEeiuGJdTYPEkJg" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TNIPAcEcEeiuGJdTYPEkJg"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TNWRcMEcEeiuGJdTYPEkJg" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TNk68MEcEeiuGJdTYPEkJg" name="lblEquacao" type="_bBVI8MENEeib37i1UJ2W6Q"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TOQQYMEcEeiuGJdTYPEkJg" name="lblResultado" type="_bBVI8MENEeib37i1UJ2W6Q"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TO-CEMEcEeiuGJdTYPEkJg" name="indexNumeros">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TPu3EMEcEeiuGJdTYPEkJg" name="operacao">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                  </packagedElement>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Package" xmi:id="_gCRTQMENEeib37i1UJ2W6Q" name="model">
+                  <packagedElement xmi:type="uml:Class" xmi:id="_gCUWkMENEeib37i1UJ2W6Q" name="Calculadora" visibility="public">
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_gCbrUMENEeib37i1UJ2W6Q" name="Calculadora implements ICalculadora" client="_gCUWkMENEeib37i1UJ2W6Q" supplier="_gCU9oMENEeib37i1UJ2W6Q" contract="_gCU9oMENEeib37i1UJ2W6Q"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gChx8MENEeib37i1UJ2W6Q" name="soma" specification="_gCcSYMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQuH0MENEeib37i1UJ2W6Q" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQuu4MENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQuu4cENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQuu4sENEeib37i1UJ2W6Q" name="num1">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQvV8MENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQvV8cENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQvV8sENEeib37i1UJ2W6Q" name="num2">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQvV88ENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQvV9MENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <language>JAVA</language>
+                      <body>&#xD;
+    double resul = 0;&#xD;
+    resul = num1 + num2;&#xD;
+    return resul;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gCptwMENEeib37i1UJ2W6Q" name="subtracao" specification="_gCmDYMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQv9AMENEeib37i1UJ2W6Q" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQv9AcENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQv9AsENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQv9A8ENEeib37i1UJ2W6Q" name="num1">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQv9BMENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQv9BcENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQwkEMENEeib37i1UJ2W6Q" name="num2">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQwkEcENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQwkEsENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <language>JAVA</language>
+                      <body>&#xD;
+    double resul = 0;&#xD;
+    resul = num1 - num2;&#xD;
+    return resul;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gCzewMENEeib37i1UJ2W6Q" name="multiplicacao" specification="_gCri8MENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQwkE8ENEeib37i1UJ2W6Q" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQwkFMENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQwkFcENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQxLIMENEeib37i1UJ2W6Q" name="num1">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQxLIcENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQxLIsENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQxLI8ENEeib37i1UJ2W6Q" name="num2">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQxLJMENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQxLJcENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <language>JAVA</language>
+                      <body>&#xD;
+    double resul = 0;&#xD;
+    resul = num1 * num2;&#xD;
+    return resul;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gC9PwMENEeib37i1UJ2W6Q" name="divisao" specification="_gC2iEMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQxyMMENEeib37i1UJ2W6Q" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQxyMcENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQxyMsENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQxyM8ENEeib37i1UJ2W6Q" name="num1">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQyZQMENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQyZQcENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQyZQsENEeib37i1UJ2W6Q" name="num2">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQyZQ8ENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQzAUMENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <language>JAVA</language>
+                      <body>&#xD;
+    double resul = 0;&#xD;
+    if (num2 == 0) {&#xD;
+        System.out.println(&quot;Erro! Divisão por zero&quot;);&#xD;
+    }&#xD;
+    resul = num1 / num2;&#xD;
+    return resul;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_gDQKsMENEeib37i1UJ2W6Q" name="realizarOperacao" specification="_gDA6IMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQzAUcENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQzAUsENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQznYMENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQznYcENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQznYsENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQznY8ENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQznZMENEeib37i1UJ2W6Q" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQ0OcMENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQ0OccENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <language>JAVA</language>
+                      <body>&#xD;
+    for (int i = 0; i &lt; equacao.size(); i++) {&#xD;
+        double resultado = 0;&#xD;
+        if (equacao.get(i).equals(&quot;+&quot;)) {&#xD;
+            resultado = soma(Double.parseDouble(numeros.get(i)), Double.parseDouble(numeros.get(i + 1)));&#xD;
+        } else if (equacao.get(i).equals(&quot;-&quot;)) {&#xD;
+            resultado = subtracao(Double.parseDouble(numeros.get(i)), Double.parseDouble(numeros.get(i + 1)));&#xD;
+        } else if (equacao.get(i).equals(&quot;X&quot;)) {&#xD;
+            resultado = multiplicacao(Double.parseDouble(numeros.get(i)), Double.parseDouble(numeros.get(i + 1)));&#xD;
+        } else if (equacao.get(i).equals(&quot;/&quot;)) {&#xD;
+            resultado = divisao(Double.parseDouble(numeros.get(i)), Double.parseDouble(numeros.get(i + 1)));&#xD;
+        }&#xD;
+        numeros.set((i + 1), String.valueOf(resultado));&#xD;
+    }&#xD;
+    return numeros.get(numeros.size() - 1);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_gCcSYMENEeib37i1UJ2W6Q" name="soma" visibility="public" method="_gChx8MENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gCdggMENEeib37i1UJ2W6Q" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gCeuoMENEeib37i1UJ2W6Q" name="num1">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gCf8wMENEeib37i1UJ2W6Q" name="num2">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_gCmDYMENEeib37i1UJ2W6Q" name="subtracao" visibility="public" method="_gCptwMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gCnRgMENEeib37i1UJ2W6Q" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gCn4kMENEeib37i1UJ2W6Q" name="num1">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gCpGsMENEeib37i1UJ2W6Q" name="num2">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_gCri8MENEeib37i1UJ2W6Q" name="multiplicacao" visibility="public" method="_gCzewMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gCsKAMENEeib37i1UJ2W6Q" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gCtYIMENEeib37i1UJ2W6Q" name="num1">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gCyQoMENEeib37i1UJ2W6Q" name="num2">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_gC2iEMENEeib37i1UJ2W6Q" name="divisao" visibility="public" method="_gC9PwMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gC3wMMENEeib37i1UJ2W6Q" direction="return">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gC6zgMENEeib37i1UJ2W6Q" name="num1">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gC8BoMENEeib37i1UJ2W6Q" name="num2">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_gDA6IMENEeib37i1UJ2W6Q" name="realizarOperacao" visibility="public" method="_gDQKsMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gDD9cMENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gDGZsMENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gDHAwMENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gDIO4MENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gDLSMMENEeib37i1UJ2W6Q" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gDNucMENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gDO8kMENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iOqSUMENEeib37i1UJ2W6Q" name="realizarOperacao"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iO2fkcENEeib37i1UJ2W6Q" name="realizarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iO3tsMENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iO3tscENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iO5i4MENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iPL2wMENEeib37i1UJ2W6Q" name="realizarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPMd0MENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iPMd0cENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iPMd0sENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iPVnwMENEeib37i1UJ2W6Q" name="realizarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPWO0MENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iPWO0cENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iPWO0sENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPW14MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iPW14cENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iPYEAMENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iPf_0cENEeib37i1UJ2W6Q" name="realizarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPgm4MENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iPgm4cENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iPgm4sENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPhN8MENEeib37i1UJ2W6Q" name="equacao">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iPhN8cENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iPh1AMENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iPqX4MENEeib37i1UJ2W6Q" name="realizarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPq-8MENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iPsNEMENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iPs0IMENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPs0IcENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iPs0IsENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iPs0I8ENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iP0v8MENEeib37i1UJ2W6Q" name="realizarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iP0v8cENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iP0v8sENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iP1XAMENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iP1XAcENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iP1XAsENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iP1XA8ENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iP-g8MENEeib37i1UJ2W6Q" name="realizarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iP-g8cENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iP-g8sENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iP_IAMENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iP_IAcENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iP_IAsENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iP_IA8ENEeib37i1UJ2W6Q"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iQIR8MENEeib37i1UJ2W6Q" name="realizarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQI5AMENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQI5AcENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQI5AsENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQI5A8ENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQI5BMENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQJgEMENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQJgEcENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQJgEsENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQJgE8ENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iQQ00MENEeib37i1UJ2W6Q" name="realizarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQQ00cENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQRb4MENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQRb4cENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQRb4sENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQSC8MENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQSC8cENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQSC8sENEeib37i1UJ2W6Q" name="numeros">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQSC88ENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQSC9MENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iQYwoMENEeib37i1UJ2W6Q" name="realizarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQYwocENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQYwosENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQZXsMENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQZXscENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQZXssENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQZXs8ENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQZXtMENEeib37i1UJ2W6Q" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQZXtcENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQZ-wMENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iQh6kMENEeib37i1UJ2W6Q" name="realizarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQh6kcENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQihoMENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQihocENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQihosENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQiho8ENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQjIsMENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQjIscENEeib37i1UJ2W6Q" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQjIssENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQjIs8ENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iQrrkMENEeib37i1UJ2W6Q" name="realizarOperacao">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQsSoMENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQsSocENEeib37i1UJ2W6Q" value="1"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQsSosENEeib37i1UJ2W6Q" value="1"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQsSo8ENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQsSpMENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQs5sMENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQs5scENEeib37i1UJ2W6Q" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQs5ssENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQs5s8ENEeib37i1UJ2W6Q"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Interface" xmi:id="_gCU9oMENEeib37i1UJ2W6Q" name="ICalculadora" visibility="public">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="__6SOoMHGEeiwpfr1rwX9Zg" name="imaincontrol" type="_KRDE0MEcEeiuGJdTYPEkJg" association="__6QZcMHGEeiwpfr1rwX9Zg">
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__6TcwMHGEeiwpfr1rwX9Zg" value="1"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__6Uq4MHGEeiwpfr1rwX9Zg" value="1"/>
+                    </ownedAttribute>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_iOprQMENEeib37i1UJ2W6Q" name="realizarOperacao" visibility="private">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iO2fkMENEeib37i1UJ2W6Q" type="_bAuE8MENEeib37i1UJ2W6Q" direction="return"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iPVAsMENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iP0I4MENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iP954cENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iQHq4MENEeib37i1UJ2W6Q" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQhTgMENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQrEgMENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                  </packagedElement>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Package" xmi:id="_j1OAcMENEeib37i1UJ2W6Q" name="view">
+                  <packagedElement xmi:type="uml:Class" xmi:id="_j1SR4MENEeib37i1UJ2W6Q" name="Botao" visibility="public">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_j1V8QMENEeib37i1UJ2W6Q" general="_j1SR4cENEeib37i1UJ2W6Q"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_j1XKYMENEeib37i1UJ2W6Q" name="control" visibility="private" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_zBO4ksHGEeiwpfr1rwX9Zg" name="imaincontrol" type="_KRDE0MEcEeiuGJdTYPEkJg" association="_zBORgMHGEeiwpfr1rwX9Zg">
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zBR74MHGEeiwpfr1rwX9Zg" value="1"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zBW0YMHGEeiwpfr1rwX9Zg" value="*"/>
+                    </ownedAttribute>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_j1peQMENEeib37i1UJ2W6Q" name="Botao" specification="_j1bb0MENEeib37i1UJ2W6Q">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    setBorder(null);&#xD;
+    setMargin(new Insets(0, 0, 0, 0));&#xD;
+    setMinimumSize(new Dimension(85, 35));&#xD;
+    setText(s);&#xD;
+    addMouseListener(new MouseAdapter() {&#xD;
+&#xD;
+        @Override&#xD;
+        public void mousePressed(MouseEvent e) {&#xD;
+            atualizarResultado(s);&#xD;
+        }&#xD;
+    });&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_j1yoMMENEeib37i1UJ2W6Q" name="atualizarResultado" specification="_j1vk4MENEeib37i1UJ2W6Q">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    if (control == null) {&#xD;
+        control = new MainControl();&#xD;
+    }&#xD;
+    control.atualizarResultado(s);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_j1bb0MENEeib37i1UJ2W6Q" name="Botao" visibility="public" method="_j1peQMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_j1oQIMENEeib37i1UJ2W6Q" name="s" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_j1vk4MENEeib37i1UJ2W6Q" name="atualizarResultado" visibility="private" method="_j1yoMMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_j1wzAMENEeib37i1UJ2W6Q" name="s" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Interface" xmi:id="_lhk0kMENEeib37i1UJ2W6Q" name="IMainWindow" visibility="public">
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_XVo7QMHGEeiwpfr1rwX9Zg" name="imaincontrol" type="_KRDE0MEcEeiuGJdTYPEkJg" association="_XVULIMHGEeiwpfr1rwX9Zg">
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XVqwcMHGEeiwpfr1rwX9Zg" value="1"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XVrXgMHGEeiwpfr1rwX9Zg" value="1"/>
+                    </ownedAttribute>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_lhlboMENEeib37i1UJ2W6Q" name="carregarJanela" visibility="private"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_lhmCsMENEeib37i1UJ2W6Q" name="atualizarResultado" visibility="private">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lhnQ0MENEeib37i1UJ2W6Q" name="s" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_lhpGAMENEeib37i1UJ2W6Q" name="enviarOperacao" visibility="private">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lhptEMENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lhqUIMENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lhqUIcENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lhq7MMENEeib37i1UJ2W6Q" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lhriQMENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lhriQcENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_lhriQsENEeib37i1UJ2W6Q" name="resultadoFinal" visibility="private">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lhsJUMENEeib37i1UJ2W6Q" name="s" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_lhswYMENEeib37i1UJ2W6Q" name="carregarConfig" visibility="private">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lhtXcMENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lht-gMENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lht-gcENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lhulkMENEeib37i1UJ2W6Q" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lhulkcENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lhvMoMENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lhvMocENEeib37i1UJ2W6Q" name="strEquacao" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lhvzsMENEeib37i1UJ2W6Q" name="strResultado" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lhwawMENEeib37i1UJ2W6Q" name="indexNumeros">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lhyP8MENEeib37i1UJ2W6Q" name="operacao">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                  </packagedElement>
+                  <packagedElement xmi:type="uml:Class" xmi:id="_mKkHMMENEeib37i1UJ2W6Q" name="MainWindow" visibility="public">
+                    <generalization xmi:type="uml:Generalization" xmi:id="_mKsDAMENEeib37i1UJ2W6Q" general="_mKnxkMENEeib37i1UJ2W6Q"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mKywsMENEeib37i1UJ2W6Q" name="window" visibility="private" isStatic="true" type="_mKkHMMENEeib37i1UJ2W6Q" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mK2bEMENEeib37i1UJ2W6Q" name="control" visibility="private" isStatic="true" isUnique="false"/>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mK-98MENEeib37i1UJ2W6Q" name="pnlResultado" visibility="private" type="_mK4QQMENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mLBaMMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new JPanel()</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mLFroMENEeib37i1UJ2W6Q" name="pnlOperadores" visibility="private" type="_mK4QQMENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mLHg0MENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new JPanel()</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mLIu8MENEeib37i1UJ2W6Q" name="operacao" visibility="private" isUnique="false">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mLKkIMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>false</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mLR44MENEeib37i1UJ2W6Q" name="botao0" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mLTuEMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;CE&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mLWKUMENEeib37i1UJ2W6Q" name="botao1" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mLWxYMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;C&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mLabwMENEeib37i1UJ2W6Q" name="botao2" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mLcQ8MENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;&lt;&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mLeGIMENEeib37i1UJ2W6Q" name="botao3" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mLhwgMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;/&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mLla4MENEeib37i1UJ2W6Q" name="botao4" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mLnQEMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;7&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mLpFQMENEeib37i1UJ2W6Q" name="botao5" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mLqTYMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;8&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mLtWsMENEeib37i1UJ2W6Q" name="botao6" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mLvy8MENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;9&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mLyPMMENEeib37i1UJ2W6Q" name="botao7" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mL0rcMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;X&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mL15kMENEeib37i1UJ2W6Q" name="botao8" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mL2goMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;4&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mL3HsMENEeib37i1UJ2W6Q" name="botao9" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mL3uwMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;5&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mL3uwcENEeib37i1UJ2W6Q" name="botao10" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mL4V0MENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;6&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mL4V0cENEeib37i1UJ2W6Q" name="botao11" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mL484MENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;-&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mL5j8MENEeib37i1UJ2W6Q" name="botao12" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mL5j8cENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;1&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mL6yEMENEeib37i1UJ2W6Q" name="botao13" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mL8nQMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;2&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mL-ccMENEeib37i1UJ2W6Q" name="botao14" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mL_DgMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;3&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mMBfwMENEeib37i1UJ2W6Q" name="botao15" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mMD8AMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;+&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mMGYQMENEeib37i1UJ2W6Q" name="botao16" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mMHmYMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;+ -&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mMJbkMENEeib37i1UJ2W6Q" name="botao17" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mMLQwMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;0&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mMNtAMENEeib37i1UJ2W6Q" name="botao18" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mMPiMMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;,&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mMRXYMENEeib37i1UJ2W6Q" name="botao19" visibility="private" type="_j1SR4MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mMTMkMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new Botao(&quot;=&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mMVBwMENEeib37i1UJ2W6Q" name="pnlResultadoEquacao" visibility="private" isLeaf="true" type="_mK4QQMENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mMXeAMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new JPanel()</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mMZTMMENEeib37i1UJ2W6Q" name="lblEquacao" visibility="private" isLeaf="true" type="_bBVI8MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mMbvcMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new JLabel(&quot;&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mMdkoMENEeib37i1UJ2W6Q" name="lblResultado" visibility="private" isLeaf="true" type="_bBVI8MENEeib37i1UJ2W6Q" isUnique="false">
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mMgA4MENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new JLabel(&quot;&quot;)</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mMlgcMENEeib37i1UJ2W6Q" name="equacao" visibility="private" type="_bAuE8MENEeib37i1UJ2W6Q" isUnique="false">
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mMn8sMENEeib37i1UJ2W6Q"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mMojwMENEeib37i1UJ2W6Q" value="*"/>
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mMpK0MENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new ArrayList&lt;String>()</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mMrnEMENEeib37i1UJ2W6Q" name="numeros" visibility="private" type="_bAuE8MENEeib37i1UJ2W6Q" isUnique="false">
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mMuDUMENEeib37i1UJ2W6Q"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mMuqYMENEeib37i1UJ2W6Q" value="*"/>
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mMv4gMENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>new ArrayList&lt;String>()</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <ownedAttribute xmi:type="uml:Property" xmi:id="_mMxtsMENEeib37i1UJ2W6Q" name="indexNumeros" visibility="private" isUnique="false">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mMzi4MENEeib37i1UJ2W6Q" name="defaultValue">
+                        <language>JAVA</language>
+                        <body>0</body>
+                      </defaultValue>
+                    </ownedAttribute>
+                    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_mKxikMENEeib37i1UJ2W6Q" name="MainWindow implements IMainWindow" client="_mKkHMMENEeib37i1UJ2W6Q" supplier="_lhk0kMENEeib37i1UJ2W6Q" contract="_lhk0kMENEeib37i1UJ2W6Q"/>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mM6QkMENEeib37i1UJ2W6Q" name="MainWindow" specification="_mM0xAMENEeib37i1UJ2W6Q">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    setTitle(&quot;Calculadora&quot;);&#xD;
+    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);&#xD;
+    setMinimumSize(new Dimension(400, 300));&#xD;
+    setSize(new Dimension(400, 300));&#xD;
+    setResizable(false);&#xD;
+    setLocationRelativeTo(null);&#xD;
+    getContentPane().add(pnlResultado, BorderLayout.NORTH);&#xD;
+    pnlResultado.add(pnlResultadoEquacao);&#xD;
+    pnlResultadoEquacao.setLayout(new BorderLayout(0, 0));&#xD;
+    lblEquacao.setHorizontalAlignment(SwingConstants.RIGHT);&#xD;
+    pnlResultadoEquacao.add(lblEquacao, BorderLayout.NORTH);&#xD;
+    lblResultado.setHorizontalAlignment(SwingConstants.RIGHT);&#xD;
+    pnlResultadoEquacao.add(lblResultado, BorderLayout.SOUTH);&#xD;
+    getContentPane().add(pnlOperadores, BorderLayout.CENTER);&#xD;
+    pnlOperadores.setLayout(new MigLayout(&quot;&quot;, &quot;[125px][125px][125px][125px]&quot;, &quot;[50px][50px][50px][50px][50px]&quot;));&#xD;
+    pnlOperadores.add(botao0, &quot;cell 0 0,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao1, &quot;cell 1 0,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao2, &quot;cell 2 0,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao3, &quot;cell 3 0,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao4, &quot;cell 0 1,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao5, &quot;cell 1 1,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao6, &quot;cell 2 1,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao7, &quot;cell 3 1,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao8, &quot;cell 0 2,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao9, &quot;cell 1 2,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao10, &quot;cell 2 2,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao11, &quot;cell 3 2,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao12, &quot;cell 0 3,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao13, &quot;cell 1 3,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao14, &quot;cell 2 3,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao15, &quot;cell 3 3,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao16, &quot;cell 0 4,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao17, &quot;cell 1 4,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao18, &quot;cell 2 4,alignx center,aligny center&quot;);&#xD;
+    pnlOperadores.add(botao19, &quot;cell 3 4,alignx center,aligny center&quot;);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mNBlUMENEeib37i1UJ2W6Q" name="atualizarResultado" specification="_mM9T4MENEeib37i1UJ2W6Q">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // Se a interface control não foi inicializada, inicializa.&#xD;
+    if (control == null) {&#xD;
+        control = new MainControl();&#xD;
+    }&#xD;
+    // Se o label resultado somente contiver zero e não tiver pressionado vírgula remova-o primeiro zero.&#xD;
+    if (lblResultado.getText().equals(&quot;0&quot;) &amp;&amp; !s.equals(&quot;,&quot;)) {&#xD;
+        String consertoZero = numeros.get(indexNumeros).replaceFirst(&quot;0&quot;, &quot;&quot;);&#xD;
+        numeros.set(indexNumeros, consertoZero);&#xD;
+    }&#xD;
+    // Se o botão clicado não contiver string de instruções.&#xD;
+    if (!s.equals(&quot;CE&quot;) &amp;&amp; !s.equals(&quot;C&quot;) &amp;&amp; !s.equals(&quot;&lt;&quot;) &amp;&amp; !s.equals(&quot;/&quot;) &amp;&amp; !s.equals(&quot;X&quot;) &amp;&amp; !s.equals(&quot;-&quot;) &amp;&amp; !s.equals(&quot;+&quot;) &amp;&amp; !s.equals(&quot;=&quot;) &amp;&amp; !s.equals(&quot;+ -&quot;)) {&#xD;
+        // Se o tamanho do ArrayList de números for igual ao índice, concatene as strings.&#xD;
+        if (numeros.size() - 1 == indexNumeros) {&#xD;
+            String temp = numeros.get(indexNumeros).concat(s);&#xD;
+            numeros.set(indexNumeros, temp);&#xD;
+        } else // Senão adicione um novo elemento ao ArrayList.&#xD;
+        {&#xD;
+            numeros.add(indexNumeros, s);&#xD;
+        }&#xD;
+        lblResultado.setText(numeros.get(indexNumeros));&#xD;
+    } else // Senão se a instrução for de reiniciar a calculadora, apaga todos os ArrayList e reseta a interface e operadores.&#xD;
+    if (s.equals(&quot;CE&quot;)) {&#xD;
+        equacao.clear();&#xD;
+        numeros.clear();&#xD;
+        lblEquacao.setText(&quot;&quot;);&#xD;
+        lblResultado.setText(&quot;&quot;);&#xD;
+        indexNumeros = 0;&#xD;
+        operacao = false;&#xD;
+    } else // Senão se a instrução for de apagar os último números digitados, reseta o último elemento do ArrayList de números.&#xD;
+    if (s.equals(&quot;C&quot;)) {&#xD;
+        numeros.set(indexNumeros, &quot;&quot;);&#xD;
+        lblResultado.setText(numeros.get(indexNumeros));&#xD;
+    } else // Senão se a instrução for de apagar o último dígito e houver dígitos, modifica o último elemento do ArrayList de números para remover o último dígito.&#xD;
+    if (s.equals(&quot;&lt;&quot;) &amp;&amp; lblResultado.getText().length() >= 1) {&#xD;
+        numeros.set(indexNumeros, numeros.get(indexNumeros).substring(0, numeros.get(indexNumeros).length() - 1));&#xD;
+        lblResultado.setText(numeros.get(indexNumeros));&#xD;
+    } else // Senão se a instrução de mudar de sinal for pressionada e houver dígitos, muda o sinal do número&#xD;
+    if (s.equals(&quot;+ -&quot;) &amp;&amp; lblResultado.getText().length() >= 1) {&#xD;
+        String temp = &quot;&quot;;&#xD;
+        if (numeros.get(indexNumeros).startsWith(&quot;-&quot;)) {&#xD;
+            temp = numeros.get(indexNumeros).substring(1);&#xD;
+        } else {&#xD;
+            String negativo = &quot;-&quot;;&#xD;
+            temp = negativo.concat(numeros.get(indexNumeros));&#xD;
+        }&#xD;
+        numeros.set(indexNumeros, temp);&#xD;
+        lblResultado.setText(numeros.get(indexNumeros));&#xD;
+    } else /* Senão se a instrução for de operadores, pega o último elemento do ArrayList de números modifica o vírgula pelo ponto 
+        e reseta a interface de resultado deixando o último elemento na equação, também adicionando o operador a ArrayList de equação 
+        e incrementando o índice de números. 
+        */&#xD;
+    if (s.equals(&quot;X&quot;) || s.equals(&quot;/&quot;) || s.equals(&quot;+&quot;) || s.equals(&quot;-&quot;)) {&#xD;
+        // Se não houver dígitos e for pressionado o sinal de menos&#xD;
+        if (lblResultado.getText().equals(&quot;&quot;) &amp;&amp; s.equals(&quot;-&quot;)) {&#xD;
+            numeros.add(indexNumeros, s);&#xD;
+            lblResultado.setText(numeros.get(indexNumeros));&#xD;
+        } else // Senão realiza as operações&#xD;
+        {&#xD;
+            String temp = numeros.get(indexNumeros);&#xD;
+            String tempFinal = temp.replace(',', '.');&#xD;
+            numeros.set(indexNumeros, tempFinal);&#xD;
+            lblEquacao.setText(lblResultado.getText() + &quot; &quot; + s);&#xD;
+            equacao.add(s);&#xD;
+            lblResultado.setText(&quot;&quot;);&#xD;
+            operacao = true;&#xD;
+            indexNumeros++;&#xD;
+        }&#xD;
+    } else /* Senão se o operador for de igual, modifica o último elemento do ArrayList de numeros de vírgula para ponto 
+        e envia a operação ao método &quot;enviarOperacao&quot; com parâmetros do ArrayList de equacao e numeros.
+        */&#xD;
+    if (s.equals(&quot;=&quot;) &amp;&amp; operacao == true) {&#xD;
+        String temp = lblResultado.getText();&#xD;
+        String tempFinal = temp.replace(',', '.');&#xD;
+        numeros.set(indexNumeros, tempFinal);&#xD;
+        enviarOperacao(equacao, numeros);&#xD;
+        operacao = false;&#xD;
+    }&#xD;
+    window.doLayout();&#xD;
+    window.repaint();&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mNF2wMENEeib37i1UJ2W6Q" name="carregarJanela" specification="_mNEooMENEeib37i1UJ2W6Q">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    if (window == null) {&#xD;
+        window = new MainWindow();&#xD;
+    }&#xD;
+    this.setVisible(true);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mNRc8MENEeib37i1UJ2W6Q" name="enviarOperacao" specification="_mNI6EMENEeib37i1UJ2W6Q">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    control.enviarOperacao(equacao, numeros);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mNW8gMENEeib37i1UJ2W6Q" name="resultadoFinal" specification="_mNT5MMENEeib37i1UJ2W6Q">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    lblEquacao.setText(&quot;&quot;);&#xD;
+    String temp = s;&#xD;
+    String tempFinal = temp.replace('.', ',');&#xD;
+    String consertoZero = tempFinal.replace(&quot;,0&quot;, &quot;&quot;);&#xD;
+    lblResultado.setText(consertoZero);&#xD;
+    equacao.clear();&#xD;
+    numeros.clear();&#xD;
+    numeros.add(consertoZero);&#xD;
+    indexNumeros = 0;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mNam4MENEeib37i1UJ2W6Q" name="dispose" specification="_mNZYwMENEeib37i1UJ2W6Q">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    // Se a interface control não foi inicializada, inicializa.&#xD;
+    if (control == null) {&#xD;
+        control = new MainControl();&#xD;
+    }&#xD;
+    control.salvarConfig(equacao, numeros, lblEquacao, lblResultado, indexNumeros, operacao);&#xD;
+    System.exit(0);&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mNs6wMENEeib37i1UJ2W6Q" name="carregarConfig" specification="_mNdqMMENEeib37i1UJ2W6Q">
+                      <language>JAVA</language>
+                      <body>&#xD;
+    this.equacao = equacao;&#xD;
+    if (this.equacao == null) {&#xD;
+        this.equacao = new ArrayList&lt;String>();&#xD;
+    }&#xD;
+    this.numeros = numeros;&#xD;
+    if (this.numeros == null) {&#xD;
+        this.numeros = new ArrayList&lt;String>();&#xD;
+    }&#xD;
+    lblEquacao.setText(strEquacao);&#xD;
+    lblResultado.setText(strResultado);&#xD;
+    this.indexNumeros = indexNumeros;&#xD;
+    this.operacao = operacao;&#xD;
+</body>
+                    </ownedBehavior>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_mM0xAMENEeib37i1UJ2W6Q" name="MainWindow" visibility="public" method="_mM6QkMENEeib37i1UJ2W6Q"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_mM9T4MENEeib37i1UJ2W6Q" name="atualizarResultado" visibility="public" method="_mNBlUMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mM_JEMENEeib37i1UJ2W6Q" name="s" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_mNEooMENEeib37i1UJ2W6Q" name="carregarJanela" visibility="public" method="_mNF2wMENEeib37i1UJ2W6Q"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_mNI6EMENEeib37i1UJ2W6Q" name="enviarOperacao" visibility="public" method="_mNRc8MENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mNKvQMENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mNL9YMENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mNNLgMENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mNOZoMENEeib37i1UJ2W6Q" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mNPnwMENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mNQO0MENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_mNT5MMENEeib37i1UJ2W6Q" name="resultadoFinal" visibility="public" method="_mNW8gMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mNVuYMENEeib37i1UJ2W6Q" name="s" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                    </ownedOperation>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_mNZYwMENEeib37i1UJ2W6Q" name="dispose" visibility="public" method="_mNam4MENEeib37i1UJ2W6Q"/>
+                    <ownedOperation xmi:type="uml:Operation" xmi:id="_mNdqMMENEeib37i1UJ2W6Q" name="carregarConfig" visibility="public" method="_mNs6wMENEeib37i1UJ2W6Q">
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mNgGcMENEeib37i1UJ2W6Q" name="equacao" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mNhUkMENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mNh7oMENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mNjJwMENEeib37i1UJ2W6Q" name="numeros" type="_bAuE8MENEeib37i1UJ2W6Q">
+                        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mNkX4MENEeib37i1UJ2W6Q"/>
+                        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mNk-8MENEeib37i1UJ2W6Q" value="*"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mNmNEMENEeib37i1UJ2W6Q" name="strEquacao" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mNoCQMENEeib37i1UJ2W6Q" name="strResultado" type="_bAuE8MENEeib37i1UJ2W6Q"/>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mNp3cMENEeib37i1UJ2W6Q" name="indexNumeros">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                      </ownedParameter>
+                      <ownedParameter xmi:type="uml:Parameter" xmi:id="_mNrFkMENEeib37i1UJ2W6Q" name="operacao">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                      </ownedParameter>
+                    </ownedOperation>
+                  </packagedElement>
+                </packagedElement>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_bAXfoMENEeib37i1UJ2W6Q" name="importedTypes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_bAYGsMENEeib37i1UJ2W6Q" name="br">
+        <packagedElement xmi:type="uml:Package" xmi:id="_bAYGscENEeib37i1UJ2W6Q" name="facet">
+          <packagedElement xmi:type="uml:Package" xmi:id="_bAYGssENEeib37i1UJ2W6Q" name="natan">
+            <packagedElement xmi:type="uml:Package" xmi:id="_bAYtwMENEeib37i1UJ2W6Q" name="barbosa">
+              <packagedElement xmi:type="uml:Package" xmi:id="_bAYtwcENEeib37i1UJ2W6Q" name="calc">
+                <packagedElement xmi:type="uml:Package" xmi:id="_bAYtwsENEeib37i1UJ2W6Q" name="view">
+                  <packagedElement xmi:type="uml:Interface" xmi:id="_bAYtw8ENEeib37i1UJ2W6Q" name="IMainWindow"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Package" xmi:id="_bAh3sMENEeib37i1UJ2W6Q" name="model">
+                  <packagedElement xmi:type="uml:Interface" xmi:id="_bAjF0MENEeib37i1UJ2W6Q" name="ICalculadora"/>
+                </packagedElement>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_bBSssMENEeib37i1UJ2W6Q" name="javax">
+        <packagedElement xmi:type="uml:Package" xmi:id="_bBUh4MENEeib37i1UJ2W6Q" name="swing">
+          <packagedElement xmi:type="uml:Class" xmi:id="_bBVI8MENEeib37i1UJ2W6Q" name="JLabel"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_j1SR4cENEeib37i1UJ2W6Q" name="JButton"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_mKnxkMENEeib37i1UJ2W6Q" name="JFrame"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_mK4QQMENEeib37i1UJ2W6Q" name="JPanel"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_bArosMENEeib37i1UJ2W6Q" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_bAsPwMENEeib37i1UJ2W6Q" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_bAs20MENEeib37i1UJ2W6Q" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_bAuE8MENEeib37i1UJ2W6Q" name="String"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_XVULIMHGEeiwpfr1rwX9Zg" memberEnd="_XVo7QMHGEeiwpfr1rwX9Zg _XVr-kMHGEeiwpfr1rwX9Zg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XVmfAMHGEeiwpfr1rwX9Zg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XVnGEMHGEeiwpfr1rwX9Zg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_zBORgMHGEeiwpfr1rwX9Zg" memberEnd="_zBO4ksHGEeiwpfr1rwX9Zg _zBbs4MHGEeiwpfr1rwX9Zg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zBO4kMHGEeiwpfr1rwX9Zg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zBO4kcHGEeiwpfr1rwX9Zg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="__6QZcMHGEeiwpfr1rwX9Zg" memberEnd="__6SOoMHGEeiwpfr1rwX9Zg __6VR8MHGEeiwpfr1rwX9Zg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__6RnkMHGEeiwpfr1rwX9Zg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__6RnkcHGEeiwpfr1rwX9Zg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_a_0tEMENEeib37i1UJ2W6Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_a_17MMENEeib37i1UJ2W6Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_a_2iQMENEeib37i1UJ2W6Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_a_2iQcENEeib37i1UJ2W6Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_a_2iQsENEeib37i1UJ2W6Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_a_3JUMENEeib37i1UJ2W6Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_bAbxEMENEeib37i1UJ2W6Q" name="br.facet.natan.barbosa.calc.view.IMainWindow" base_Classifier="_bAYtw8ENEeib37i1UJ2W6Q"/>
+  <PapyrusJava:External xmi:id="_bAmJIMENEeib37i1UJ2W6Q" name="br.facet.natan.barbosa.calc.model.ICalculadora" base_Classifier="_bAjF0MENEeib37i1UJ2W6Q"/>
+  <PapyrusJava:External xmi:id="_bAxvUMENEeib37i1UJ2W6Q" name="java.lang.String" base_Classifier="_bAuE8MENEeib37i1UJ2W6Q"/>
+  <PapyrusJava:External xmi:id="_bBZaYMENEeib37i1UJ2W6Q" name="javax.swing.JLabel" base_Classifier="_bBVI8MENEeib37i1UJ2W6Q"/>
+  <PapyrusJava:External xmi:id="_gCZPEMENEeib37i1UJ2W6Q" name="br.facet.natan.barbosa.calc.model.ICalculadora" base_Classifier="_gCU9oMENEeib37i1UJ2W6Q"/>
+  <PapyrusJava:External xmi:id="_j1VVMMENEeib37i1UJ2W6Q" name="javax.swing.JButton" base_Classifier="_j1SR4cENEeib37i1UJ2W6Q"/>
+  <standard:Create xmi:id="_j1lM0MENEeib37i1UJ2W6Q" base_BehavioralFeature="_j1bb0MENEeib37i1UJ2W6Q"/>
+  <PapyrusJava:External xmi:id="_mKq04MENEeib37i1UJ2W6Q" name="javax.swing.JFrame" base_Classifier="_mKnxkMENEeib37i1UJ2W6Q"/>
+  <PapyrusJava:External xmi:id="_mKvGUMENEeib37i1UJ2W6Q" name="br.facet.natan.barbosa.calc.view.IMainWindow" base_Classifier="_lhk0kMENEeib37i1UJ2W6Q"/>
+  <PapyrusJava:External xmi:id="_mK9IwMENEeib37i1UJ2W6Q" name="javax.swing.JPanel" base_Classifier="_mK4QQMENEeib37i1UJ2W6Q"/>
+  <PapyrusJava:External xmi:id="_mLQDsMENEeib37i1UJ2W6Q" name="Botao" base_Classifier="_j1SR4MENEeib37i1UJ2W6Q"/>
+  <standard:Create xmi:id="_mM30UMENEeib37i1UJ2W6Q" base_BehavioralFeature="_mM0xAMENEeib37i1UJ2W6Q"/>
+  <PapyrusJava:External xmi:id="_KRM10MEcEeiuGJdTYPEkJg" name="IMainControl" base_Classifier="_KRDE0MEcEeiuGJdTYPEkJg"/>
+</xmi:XMI>

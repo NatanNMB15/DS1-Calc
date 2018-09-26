@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <calculadora>
+        <Numeros>
+            <num>15</num>
+        </Numeros>
+        <lblEquacao/>
+        <lblResultado>15</lblResultado>
+        <indexNumeros>0</indexNumeros>
+        <operacao>false</operacao>
+    </calculadora>
+</configuration>

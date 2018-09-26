@@ -3,15 +3,19 @@ package br.facet.natan.barbosa.calc.view;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 import br.facet.natan.barbosa.calc.control.IMainControl;
 import br.facet.natan.barbosa.calc.control.MainControl;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
 import net.miginfocom.swing.MigLayout;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 import javax.swing.SwingConstants;
+
+/**
+ * Uma classe para controlar todos os recursos visuais (View).
+ * 
+ * @author Natan Barbosa
+ */
 
 public class MainWindow extends JFrame implements IMainWindow
 {
@@ -20,8 +24,6 @@ public class MainWindow extends JFrame implements IMainWindow
     private JPanel pnlResultado = new JPanel();
     private JPanel pnlOperadores = new JPanel();
     private boolean operacao = false;
-    public double num1 = 0;
-    public double num2 = 0;
     private Botao botao0 = new Botao("CE");
     private Botao botao1 = new Botao("C");
     private Botao botao2 = new Botao("<");
@@ -38,13 +40,16 @@ public class MainWindow extends JFrame implements IMainWindow
     private Botao botao13 = new Botao("2");
     private Botao botao14 = new Botao("3");
     private Botao botao15 = new Botao("+");
-    private Botao botao16 = new Botao(" ");
+    private Botao botao16 = new Botao("+ -");
     private Botao botao17 = new Botao("0");
     private Botao botao18 = new Botao(",");
     private Botao botao19 = new Botao("=");
     private final JPanel pnlResultadoEquacao = new JPanel();
     private final JLabel lblEquacao = new JLabel("");
     private final JLabel lblResultado = new JLabel("");
+    private ArrayList<String> equacao = new ArrayList<String>();
+    private ArrayList<String> numeros = new ArrayList<String>();
+    int indexNumeros = 0;
     
     
     public MainWindow() 
@@ -96,105 +101,121 @@ public class MainWindow extends JFrame implements IMainWindow
     @Override
     public void atualizarResultado(String s)
     {
+        // Se a interface control não foi inicializada, inicializa.
         if(control == null)
         {
             control = new MainControl();
         }
         
-        if(!s.equals("CE") && !s.equals("C") && !s.equals("<") && !s.equals("/") && !s.equals("X") && !s.equals("-") && !s.equals("+") && !s.equals("=") && !s.equals(" "))
+        // Se o label resultado somente contiver zero e não tiver pressionado vírgula remova-o primeiro zero.
+        if(lblResultado.getText().equals("0") && !s.equals(","))
         {
-            lblResultado.setText(lblResultado.getText() + s);
+            String consertoZero = numeros.get(indexNumeros).replaceFirst("0", "");
+            numeros.set(indexNumeros, consertoZero);
         }
+        
+        // Se o botão clicado não contiver string de instruções.
+        if(!s.equals("CE") && !s.equals("C") && !s.equals("<") && !s.equals("/") && !s.equals("X") && !s.equals("-") && !s.equals("+") && !s.equals("=") && !s.equals("+ -"))
+        {
+            // Se o tamanho do ArrayList de números for igual ao índice, concatene as strings.
+            if(numeros.size() - 1 == indexNumeros)
+            {
+                String temp = numeros.get(indexNumeros).concat(s);
+                numeros.set(indexNumeros, temp);
+            }
+            
+            // Senão adicione um novo elemento ao ArrayList.
+            else
+            {
+                numeros.add(indexNumeros, s);
+            }
+                
+            lblResultado.setText(numeros.get(indexNumeros));
+        }
+        
+        // Senão se a instrução for de reiniciar a calculadora, apaga todos os ArrayList e reseta a interface e operadores.
         else if(s.equals("CE"))
         {
+            equacao.clear();
+            numeros.clear();
             lblEquacao.setText("");
             lblResultado.setText("");
+            indexNumeros = 0;
             operacao = false;
         }
-        else if(s.equals("C") && operacao == true)
+        
+        // Senão se a instrução for de apagar os último números digitados, reseta o último elemento do ArrayList de números.
+        else if(s.equals("C"))
         {
-            lblResultado.setText("");
+            numeros.set(indexNumeros, "");
+            lblResultado.setText(numeros.get(indexNumeros));
         }
-        else if(s.equals("<"))
+        
+        // Senão se a instrução for de apagar o último dígito e houver dígitos, modifica o último elemento do ArrayList de números para remover o último dígito.
+        else if(s.equals("<") && lblResultado.getText().length() >= 1)
         {
-            lblResultado.setText(lblResultado.getText().substring(0, lblResultado.getText().length() - 1));
+            numeros.set(indexNumeros, numeros.get(indexNumeros).substring(0, numeros.get(indexNumeros).length() - 1));
+            lblResultado.setText(numeros.get(indexNumeros));
         }
-        else if(s.equals("X") || s.equals("/") || s.equals("+") || s.equals("-"))
+        
+        // Senão se a instrução de mudar de sinal for pressionada e houver dígitos, muda o sinal do número
+        else if(s.equals("+ -") && lblResultado.getText().length() >= 1)
         {
-            String temp = lblResultado.getText();
-            String tempFinal = temp.replace(',', '.');
-            if(operacao == false)
+            String temp = "";
+            if(numeros.get(indexNumeros).startsWith("-"))
             {
-                num1 = Double.parseDouble(tempFinal);
+                temp = numeros.get(indexNumeros).substring(1);
             }
-            lblEquacao.setText(lblResultado.getText() + " " + s);
-            lblResultado.setText(" ");
-            operacao = true;
+            else
+            {
+                String negativo = "-";
+                temp = negativo.concat(numeros.get(indexNumeros));
+            }
+            numeros.set(indexNumeros, temp);
+            lblResultado.setText(numeros.get(indexNumeros));
         }
+        
+        /* Senão se a instrução for de operadores, pega o último elemento do ArrayList de números modifica o vírgula pelo ponto 
+        e reseta a interface de resultado deixando o último elemento na equação, também adicionando o operador a ArrayList de equação 
+        e incrementando o índice de números. 
+        */ 
+        else if((s.equals("X") || s.equals("/") || s.equals("+") || s.equals("-")) && operacao == false)
+        {
+            // Se não houver dígitos e for pressionado o sinal de menos
+            if(lblResultado.getText().equals("") && s.equals("-"))
+            {
+                numeros.add(indexNumeros, s);
+                lblResultado.setText(numeros.get(indexNumeros));
+            }
+            
+            // Senão realiza as operações
+            else
+            {
+                String temp = numeros.get(indexNumeros);
+                String tempFinal = temp.replace(',', '.');
+                numeros.set(indexNumeros, tempFinal);
+                lblEquacao.setText(lblResultado.getText() + " " + s);
+                equacao.add(s);
+                lblResultado.setText("");
+                operacao = true;
+                indexNumeros++;
+            }
+        }
+        
+        /* Senão se o operador for de igual, modifica o último elemento do ArrayList de numeros de vírgula para ponto 
+        e envia a operação ao método "enviarOperacao" com parâmetros do ArrayList de equacao e numeros.
+        */
         else if (s.equals("=") && operacao == true)
         {
             String temp = lblResultado.getText();
             String tempFinal = temp.replace(',', '.');
-            num2 = Double.parseDouble(tempFinal);
-            double resultado = 0;
-            
-            if(lblEquacao.getText().endsWith("X"))
-            {
-                resultado = multiplicacao(num1, num2);
-                lblEquacao.setText(" ");
-                lblResultado.setText(String.valueOf(resultado));
-            }
-            
-            else if(lblEquacao.getText().endsWith("/"))
-            {
-                resultado = divisao(num1, num2);
-                lblEquacao.setText(" ");
-                lblResultado.setText(String.valueOf(resultado));
-            }
-            
-            else if(lblEquacao.getText().endsWith("+"))
-            {
-                resultado = soma(num1, num2);
-                lblEquacao.setText(" ");
-                lblResultado.setText(String.valueOf(resultado));
-            }
-            
-            else if(lblEquacao.getText().endsWith("-"))
-            {
-                resultado = subtracao(num1, num2);
-                lblEquacao.setText(" ");
-                lblResultado.setText(String.valueOf(resultado));
-            }
-            
-            num1 = resultado;
-            num2 = 0;
+            numeros.set(indexNumeros, tempFinal);
+            enviarOperacao(equacao, numeros);
+            operacao = false;
         }
+        
         window.doLayout();
         window.repaint();
-    }
-    
-    @Override
-    public double multiplicacao(double num1, double num2)
-    {
-        return control.multiplicacao(num1, num2);
-    }
-    
-    @Override
-    public double divisao(double num1, double num2)
-    {
-        return control.divisao(num1, num2);
-    }
-    
-    @Override
-    public double soma(double num1, double num2)
-    {
-        return control.soma(num1, num2);
-    }
-    
-    @Override
-    public double subtracao(double num1, double num2)
-    {
-        return control.subtracao(num1, num2);
     }
     
     @Override
@@ -205,5 +226,59 @@ public class MainWindow extends JFrame implements IMainWindow
             window = new MainWindow();
         }
         this.setVisible(true);
+    }
+
+    @Override
+    public void enviarOperacao(ArrayList<String> equacao, ArrayList<String> numeros)
+    {
+        control.enviarOperacao(equacao, numeros);
+    }
+
+    @Override
+    public void resultadoFinal(String s)
+    {
+        lblEquacao.setText("");
+        String temp = s;
+        String tempFinal = temp.replace('.', ',');
+        String consertoZero = tempFinal.replace(",0", "");
+        lblResultado.setText(consertoZero);
+        equacao.clear();
+        numeros.clear();
+        numeros.add(consertoZero);
+        indexNumeros = 0;
+    }
+    
+    /**
+     * Função para fechar a janela e salvar o estado atual da janela.
+     */
+    @Override
+    public void dispose()
+    {
+        // Se a interface control não foi inicializada, inicializa.
+        if(control == null)
+        {
+            control = new MainControl();
+        }
+        control.salvarConfig(equacao, numeros, lblEquacao, lblResultado, indexNumeros, operacao);
+        System.exit(0);
+    }
+
+    @Override
+    public void carregarConfig(ArrayList<String> equacao, ArrayList<String> numeros, String strEquacao, String strResultado, int indexNumeros, boolean operacao)
+    {
+        this.equacao = equacao;
+        if(this.equacao == null)
+        {
+            this.equacao = new ArrayList<String>();
+        }
+        this.numeros = numeros;
+        if(this.numeros == null)
+        {
+            this.numeros = new ArrayList<String>();
+        }
+        lblEquacao.setText(strEquacao);
+        lblResultado.setText(strResultado);
+        this.indexNumeros = indexNumeros;
+        this.operacao = operacao;
     }
 }

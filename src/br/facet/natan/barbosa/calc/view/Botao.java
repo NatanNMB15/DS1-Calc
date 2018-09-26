@@ -8,6 +8,11 @@ import javax.swing.JButton;
 import br.facet.natan.barbosa.calc.control.IMainControl;
 import br.facet.natan.barbosa.calc.control.MainControl;
 
+/**
+ * Uma classe como construtor de botões com evento pré-definido para atualizar a interface do View.
+ * 
+ * @author Natan Barbosa
+ */
 public class Botao extends JButton
 {   
     IMainControl control;
